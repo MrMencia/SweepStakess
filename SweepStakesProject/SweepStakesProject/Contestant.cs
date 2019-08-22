@@ -8,10 +8,14 @@ namespace SweepStakesProject
         }
 
         //variables
-            string firstName;
-            string lastName;
-            int registrationNumber;
-            string emailAddress;
+            public string firstName;
+            public string lastName;
+            public int registrationNumber;
+            public string emailAddress;
+        internal string FirstName;
+        internal string LastName;
+        internal string EmailAddress;
+        internal int RegistrationNumber;
 
 
 
@@ -48,7 +52,7 @@ namespace SweepStakesProject
         public int GenerateRegistrationNumber()
         {
             Random random = new Random();
-            int number = random.Next(1, 1000);
+            int number = random.Next(1, 10);
             return number;
         }
 

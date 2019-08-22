@@ -37,11 +37,44 @@ namespace SweepStakesProject
 
 
 
+        public static int ManageNumberOfContestants(string name)
+        {
+            int ContestantNumberChoice = 2;
+            bool InfoIsCorrect = false;
+            while (!InfoIsCorrect)
+            {
+                Console.WriteLine("How many contestants should there be for sweepstakes '" + name + "'? Type a positive integer between 2 and 10.");
+                string choice = Console.ReadLine();
+         
 
-
-
-
-
+                if (int.TryParse(choice, out ContestantNumberChoice))
+                    //Char.TryParse() is Char class method which is used to convert the value
+                    //from given string to its equivalent Unicode character. Its performance
+                    //is better than Char.Parse() method.
+                {
+                    if (ContestantNumberChoice >= 2 && ContestantNumberChoice <= 10)
+                    {
+                        InfoIsCorrect = true;
+                        return ContestantNumberChoice;
+                    }
+                }
+                else
+                {
+                    InfoIsCorrect = false;
+                }
+                Console.WriteLine("Please try again.");
+            }
+            return ContestantNumberChoice;
         }
+
+
+
+
+
+
+
+
+
     }
 }
+
