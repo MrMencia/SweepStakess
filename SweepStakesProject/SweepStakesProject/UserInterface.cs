@@ -13,7 +13,12 @@ namespace SweepStakesProject
                 return Console.ReadLine();
             }
 
-            public static string GetLastName()
+        internal static string AskManager()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static string GetLastName()
             {
                 Console.WriteLine("What is your last name?");
                 return Console.ReadLine();
@@ -25,13 +30,6 @@ namespace SweepStakesProject
                 return Console.ReadLine();
             }
 
-
-            public int GenerateRegistrationNumber()
-            {
-                Random random = new Random();
-                int number = random.Next(1, 1000);
-                return number;
-            }
 
 
 
@@ -68,13 +66,44 @@ namespace SweepStakesProject
         }
 
 
+        public int GenerateRegistrationNumber()
+        {
+            Random random = new Random();
+            int number = random.Next(1, 1000);
+            return number;
+        }
+
+
+        public string RunSweepStakes(int maxNumberOfContestants)
+        {
+            for (int i = 1; i == maxNumberOfContestants; i++)
+            {
+
+                Contestant contestant = new Contestant();
+                RegisterContestant(contestant);
+
+                //contestant is the player inputting information which is also getting
+                //registered
+
+            }
+
+            string winner = PickWinner();
+            Console.WriteLine(winner);
+            return winner;
 
 
 
+        }
 
+        private string PickWinner()
+        {
+            throw new NotImplementedException();
+        }
 
-
-
+        private void RegisterContestant(Contestant contestant)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

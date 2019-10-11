@@ -62,19 +62,19 @@ namespace SweepStakesProject
 
         public void RegisterContestant(Contestant contestant)
         {
-            contestant.FirstName = UserInterface.GetFirstName();
+            contestant.firstName = UserInterface.GetFirstName();
             
 
-            contestant.LastName = UserInterface.GetLastName();
+            contestant.lastName = UserInterface.GetLastName();
             
 
-            contestant.EmailAddress = UserInterface.GetEmail();
+            contestant.emailAddress = UserInterface.GetEmail();
 
 
-            contestant.RegistrationNumber = counter;
+            contestant.registrationNumber = counter;
             counter++;
 
-            Contestants.Add(contestant.RegistrationNumber, contestant); 
+            Contestants.Add(contestant.registrationNumber, contestant); 
             
 
             Console.WriteLine("Is all of the following information correct? y/n.");
@@ -101,10 +101,10 @@ namespace SweepStakesProject
         public void PrintContestantInfo(Contestant contestant)
         {
 
-            Console.WriteLine(contestant.FirstName);
-            Console.WriteLine(contestant.LastName);
-            Console.WriteLine(contestant.EmailAddress);
-            Console.WriteLine(contestant.RegistrationNumber);
+            Console.WriteLine(contestant.firstName);
+            Console.WriteLine(contestant.lastName);
+            Console.WriteLine(contestant.emailAddress);
+            Console.WriteLine(contestant.registrationNumber);
 
 
         }

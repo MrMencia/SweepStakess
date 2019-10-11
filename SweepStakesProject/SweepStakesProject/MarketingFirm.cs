@@ -3,8 +3,10 @@ namespace SweepStakesProject
 {
     public class MarketingFirm
     {
-        public MarketingFirm()
+        ISweepstakesManager manager;
+        public MarketingFirm(ISweepstakesManager manager)
         {
+            this.manager = manager;
 
             SweepStakes sweep = new SweepStakes("Maserati");
             sweep.RegisterContestant(new Contestant());

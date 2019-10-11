@@ -12,10 +12,9 @@ namespace SweepStakesProject
             public string lastName;
             public int registrationNumber;
             public string emailAddress;
-        internal string FirstName;
-        internal string LastName;
-        internal string EmailAddress;
-        internal int RegistrationNumber;
+      
+        
+       
 
 
 
